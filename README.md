@@ -1,6 +1,20 @@
 # Сравниваем вакансии программистов
 
-Получения информации о средних зарплатах разработчиков наиболее популярных языков программирования. В качестве источника информации используются сайты HeadHunter(https://hh.ru/) и SuperJob(https://www.superjob.ru/). Взаимодействие происходит по `API`
+Получения информации о средних зарплатах разработчиков наиболее популярных языков программирования. В качестве источника информации используются сайты [HeadHunter](https://hh.ru/) и [SuperJob](https://www.superjob.ru/). Взаимодействие происходит по `API`
+
+Исходные данные:
+
+- `HEADHUNTER_TOWN_ID = 1` - id города для поиска вакансий на [HeadHunter](https://hh.ru/), 1 - соответствует г. Москва;
+- `SYPERJOB_TOWN_ID = 4` - id города для поиска вакансий на [SuperJob](https://www.superjob.ru/), 4 - соответствует г. Москва;
+- `SYPERJOB_INDUSTRY_KEY = 48` - ключ каталога для [SuperJob](https://www.superjob.ru/), 48 - «Разработка, программирование»;
+- `PERIOD = 30` - период времени с момента публикации вакансии, 30 - 1 месяц;
+- `languages = ['python', 'java', 'javascript', 'ruby', 'php', 'c++', 'c#','go', 'shell', 'typescript']` - языки программирования.
+
+Команда запуска: `python manage.py`
+
+Результат выполнения: 
+
+![](https://github.com/Piar1986/estimate_programmer_salaries_for_vacancies/result_example.png)
 
 ### Как установить
 
