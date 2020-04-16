@@ -1,6 +1,6 @@
 # Сравниваем вакансии программистов
 
-Получения информации о средних зарплатах разработчиков наиболее популярных языков программирования. В качестве источника информации используются сайты [HeadHunter](https://hh.ru/) и [SuperJob](https://www.superjob.ru/). Взаимодействие происходит по `API`
+Получения информации о средних зарплатах разработчиков наиболее популярных языков программирования. В качестве источника информации используются сайты [HeadHunter](https://hh.ru/) и [SuperJob](https://www.superjob.ru/). Взаимодействие происходит по `API`.
 
 Исходные данные:
 
@@ -14,7 +14,7 @@
 
 Результат выполнения: 
 
-![](https://github.com/Piar1986/estimate_programmer_salaries_for_vacancies/result_example.png)
+![](https://github.com/Piar1986/estimate_programmer_salaries_for_vacancies/raw/master/result_example.png)
 
 ### Как установить
 
