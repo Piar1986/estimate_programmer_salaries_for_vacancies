@@ -11,7 +11,13 @@ def get_superjob_languages_statistic(languages):
 
     for language in languages:
 
-        all_language_vacancies = get_superjob_vacancies(superjob_secret_key, language, SYPERJOB_TOWN_ID, SYPERJOB_INDUSTRY_KEY, PERIOD)
+        all_language_vacancies = get_superjob_vacancies(
+            superjob_secret_key, 
+            language, 
+            SYPERJOB_TOWN_ID, 
+            SYPERJOB_INDUSTRY_KEY, 
+            PERIOD,
+        )
         vacancies_found, vacancies_processed, vacancies_average_salary = get_superjob_language_statistic(all_language_vacancies)
 
         languages_statistic.append({
@@ -30,7 +36,11 @@ def get_hh_languages_statistic(languages):
 
     for language in languages:
 
-        all_language_vacancies = get_hh_vacancies(language, HEADHUNTER_TOWN_ID, PERIOD)
+        all_language_vacancies = get_hh_vacancies(
+            language, 
+            HEADHUNTER_TOWN_ID, 
+            PERIOD,
+        )
         vacancies_found, vacancies_processed, vacancies_average_salary = get_hh_language_statistic(all_language_vacancies)
 
         languages_statistic.append({
@@ -56,7 +66,18 @@ if __name__ == "__main__":
     superjob_table_title = 'SuperJob Moscow'
     hh_table_title = 'HeadHunter Moscow'
 
-    languages = ['python', 'java', 'javascript', 'ruby', 'php', 'c++', 'c#','go', 'shell', 'typescript']
+    languages = [
+        'python', 
+        'java', 
+        'javascript', 
+        'ruby', 
+        'php', 
+        'c++', 
+        'c#',
+        'go', 
+        'shell', 
+        'typescript',
+    ]
 
     superjob_languages_statistic = get_superjob_languages_statistic(languages)
     print_languages_statistic(superjob_languages_statistic, superjob_table_title)
