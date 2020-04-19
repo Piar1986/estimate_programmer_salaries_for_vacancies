@@ -2,7 +2,20 @@ import requests
 
 
 def predict_salary(salary_from, salary_to):
+
+    if salary_from is None and salary_to is None:
+        return None
+
+    if salary_from is None and salary_to > 0:
+        predict_salary = salary_to*0.8
+        return predict_salary
+
+    if salary_from > 0 and salary_to is None:
+        predict_salary = salary_from*1.2
+        return predict_salary
+
     predict_salary = (salary_from + salary_to)/2
+
     return predict_salary
 
 
@@ -19,14 +32,6 @@ def predict_rub_salary_for_hh(vacancy):
 
     if currency!='RUR':
         return None
-
-    if salary_from is None and salary_to is not None:
-        average_salary = salary_to*0.8
-        return average_salary
-
-    if salary_from is not None and salary_to is None:
-        average_salary = salary_from*1.2
-        return average_salary
 
     average_salary = predict_salary(salary_from, salary_to)
 

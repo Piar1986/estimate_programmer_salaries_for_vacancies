@@ -1,9 +1,6 @@
 import requests
+from scripts import predict_salary
 
-
-def predict_salary(salary_from, salary_to):
-    predict_salary = (salary_from + salary_to)/2
-    return predict_salary
 
 def predict_rub_salary_for_SuperJob(vacancy):
 
@@ -13,17 +10,6 @@ def predict_rub_salary_for_SuperJob(vacancy):
 
     if currency!='rub':
         return None
-
-    if salary_from == 0 and salary_to == 0:
-        return None
-
-    if salary_from == 0 and salary_to > 0:
-        average_salary = salary_to*0.8
-        return average_salary
-
-    if salary_from > 0 and salary_to == 0:
-        average_salary = salary_from*1.2
-        return average_salary
 
     average_salary = predict_salary(salary_from, salary_to)
     
