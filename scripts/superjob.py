@@ -50,10 +50,11 @@ def get_superjob_vacancies(secret_key, language, town_id, catalog_industry_key, 
         }
         response = requests.get(url, headers=header, params=params)
         response.raise_for_status()
-        page_vacancies = response.json()['objects']
+        response_result = response.json() 
+        page_vacancies = response_result['objects']
         language_all_vacancies.extend(page_vacancies)
 
-        pages_number = response.json()['total']
+        pages_number = response_result['total']
         page += 1
 
     return language_all_vacancies

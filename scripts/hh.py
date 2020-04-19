@@ -52,10 +52,11 @@ def get_hh_vacancies(language, town, period):
             }
         response = requests.get(url, params=params)
         response.raise_for_status()
-        page_vacancies = response.json()['items']
+        response_result = response.json() 
+        page_vacancies = response_result['items']
         language_all_vacancies.extend(page_vacancies)
 
-        pages_number = response.json()['pages']
+        pages_number = response_result['pages']
         page += 1
 
     return language_all_vacancies
